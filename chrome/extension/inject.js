@@ -87,6 +87,7 @@ $("body").on("mousemove", function(event) {
         left: windowWidth - 150  + 'px', // was 300
      });
 
+        // ALLOW to retoggle the animation multiple times in a row.
         if (!$('.email-button-container:hover').length > 0) {
           console.log('hiding animation popover')
           // hide sent-confirmation-popover
@@ -415,6 +416,8 @@ import { render } from 'react-dom';
 import Dock from 'react-dock';
 
 import 'antd/dist/antd.css';
+import './injectMenu.css';
+
 import { Button, notification } from 'antd';
 import { Card as CardAntd } from 'antd';
 import { Card, CardMedia, CardTitle, CardText, CardActions } from 'react-toolbox/lib/card';
@@ -428,7 +431,7 @@ import * as firebase from 'firebase';
 /* initializing firebase database */
 const projectId = 'libry-81fd5';
 const databaseURL = "https://libry-81fd5.firebaseio.com/";
-const firebaseApiKey = "AIzaSyCPuRUo8juo7R-54ghbRdX7gKpIjjGWlLs"
+const firebaseApiKey = "hidden"
 const config = {  
       apiKey: firebaseApiKey,
       authDomain: "libry-81fd5.firebaseapp.com",
