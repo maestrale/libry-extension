@@ -1,0 +1,791 @@
+
+
+/* ALL antd css classes have been erased */
+
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+/*!
+ * antd v2.7.4
+ * 
+ * Copyright 2015-present, Alipay, Inc.
+ * All rights reserved.
+ */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+
+/* <link href="css/bootstrap.min.css" rel="stylesheet"> */
+
+/* ========= WALL MENU ========= */
+    .wall-menu{
+    /*background: tomato;*/
+    display: none;
+    /*z-index: 3000;*/ /* FIND WAY TO BRING IT TO chrome context menu's level*/
+    margin-right: 4px;
+    z-index: 2147483647; /* EXPLAINED: is on top of everything, z-index works */
+    position: relative;
+    overflow: hidden;
+    /*border: 1px solid #f1f1f1;*/
+    white-space: nowrap;
+    font-family: sans-serif;
+    /*background: #FFF;*/
+    color: #333;
+    border-radius: 3px;
+    width: 50px;
+    height: 200px;
+  }
+  .wall-menu-inner{
+    /*background: tomato;*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .wall-menu-button-container{
+  /*background: #f1f1f1;*/
+  /*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);*/
+  border-radius: 6px;
+  padding-top: 30px;
+  /*justify-content: center;*/
+  /*background: #fafafa;*/
+  background: white;
+  padding: 1px;
+  /*padding-top: 10px;*/
+  /*height: 50%;*/ /*was width*/
+  height: 30%;
+  text-align: center;
+  font-weight: bold;
+  color: #ff751a; /*#80d8ff;*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*padding-top: 20px;*/
+  font-size: 22px;
+  cursor: pointer;
+  }
+  .wall-menu-button-container-star{
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  /*background: #fafafa;*/
+  background: white;
+  padding: 1px;
+  /*padding-top: 10px;*/
+  /*height: 50%;*/ /*was width*/
+  height: 30%;
+  text-align: center;
+  font-weight: bold;
+  color: gold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*padding-top: 20px;*/
+  font-size: 22px;
+  cursor: pointer; 
+  }
+  .wall-menu-button-container-star i {
+    margin-top: 15px;
+  }
+  .wall-menu-button-container i {
+    margin-top: 15px;
+  }
+  .wall-menu-button-container:hover{
+    color: white;
+    background: #ff751a; 
+    animation-name: increaseIconAnimation;
+    animation-duration: 600ms;
+  }
+  .wall-menu-button-container-star:hover{
+    color: gold;
+    background: #80d8ff;
+    animation-name: increaseIconAnimation;
+    animation-duration: 600ms; 
+  }
+  .wall-menu-transparent-divider{
+    height: 40%;
+    opacity: 0;
+  }
+  /* ========= FRIENDS CONTAINER ========= */
+  .wall-menu-friends-container{
+    display: none;
+    /*background: blue;*/
+    /*padding: 1px;*/
+    z-index: 2147483647; /* EXPLAINED: is on top of everything, z-index works */
+    position: relative;
+    width: 50px;
+    height: 200px;
+    border-radius: 6px;
+  }
+  .wall-menu-friends-container:hover{
+    /*background: grey;*/
+  }
+
+  .wall-menu-friends-inner{
+    border-radius: 6px;
+    /*background: white;*/
+    cursor: pointer;
+    font-weight: bold;
+    color: gold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*padding-top: 20px;*/
+    font-size: 22px;
+  }
+  .single-friend-container{
+    /*display: none;*/
+    height: 50px;
+    width: 50px;
+    /*padding: 1px;*/
+    /*background: black;*/
+    border-radius: 6px;
+    /*opacity: 0.8;*/
+  }
+  /*.single-friend-container:hover{
+    opacity: 0.7;
+  }*/
+  .single-friend-send-caption{
+    /*background: yellow;*/
+  }
+  .wall-menu-single-friend{
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    border-radius: 6px;
+    /*background-color: black;*/
+    opacity: 0.95;
+    /*background-repeat: no-repeat;*/
+    /*overflow: hidden;*/
+    /*background-color: yellow;*/
+  }
+  .wall-menu-single-friend:hover{
+    /*background-color: black;*/
+    opacity: 0.65;
+    cursor:pointer;
+    /*background-repeat: no-repeat;*/
+    /*overflow: hidden;*/
+    /*background-color: yellow;*/
+  }
+  .checkbox-icon-container{
+    display: none;
+    width: 49px;
+    height: 49px;
+  }
+  .checkbox-icon-inner{
+    padding-top: 7px;
+    color: #80ff80;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .checkbox-icon-inner i {
+    /*background: #ff751a;*/
+    border-radius: 4px;
+    animation: fadein 0.2s;
+    -moz-animation: fadein 0.2s; /* Firefox */
+    -webkit-animation: fadein 0.2s; /* Safari and Chrome */
+    -o-animation: fadein 0.2s; /* Opera */
+}
+
+/* ========= small-icon: ARROW, SPINNER ========= */
+.small-icon-container{
+  display: none;
+  width: 39px;
+  height: 39px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+/*.arrow-icon-container:hover{
+  display: flex;
+}*/
+.small-icon-inner{
+  margin-top: 5px;
+  font-size: 24px;
+  color: white;
+}
+
+
+/* ========= EMAIL BUTTON ========= */
+
+.email-button-container{
+display: none;
+background: white;
+border-radius: 6px;
+/*border: 2px solid #ff751a;*/
+border: 2px solid rgba(239, 239, 239, 0.96);
+/*padding: 1px;*/
+height: 50px;
+width: 46px; /* was 50 */
+margin-right: 4px;
+color: #ff751a;
+}
+.email-button-container:hover{
+cursor: pointer;
+color: white;
+background: #ff751a;
+animation-name: increaseIconAnimation;
+  animation-duration: 600ms;
+}
+.email-button-inner{
+  margin-right: 4px;
+  background: white;
+  display: none;
+  overflow: visible;
+  /*border: 1.5px solid #ff751a;*/
+  /*border: 2px solid rgba(239, 239, 239, 0.96);*/
+  /*position: relative;
+  z-index: 2147483647;*/
+  /*background: blue;*/
+  width: 246px;
+  height: 69px;
+  /*direction: rtl;*/
+  border-radius: 6px;
+  /*margin-right: 75px; */
+}
+
+.envelope-icon-container{
+ width: 39px;
+  height: 39px;
+  padding-top: 12px;
+  padding-left: 14px; 
+}
+.envelope-icon-inner{
+  /*color: #ff751a;*/
+  /*margin-top: 3px;*/
+  font-size: 20px;
+  font-weight: bold;
+  /*color: rgba(239, 239, 239, 0.96);*/
+}
+.email-bar-inner{
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.email-bar-inner-upper{
+/*background: rgba(239, 239, 239, 0.96);*/
+height: 60%;
+width: 100%;
+font-size: 12px;
+display: flex;
+flex-direction: row;
+}
+.email-bar-inner-lower{
+background: white;
+height: 25%;
+width: 100%;
+font-size: 11px;
+padding: 5px;
+display: flex;
+flex-direction: row;
+}
+.email-lower-checkbox{
+  margin-top: 4px;
+}
+.email-bar-input{
+  background: white;
+  /*width: 60px;*/
+  /*display: block;*/
+  margin: 0;
+  /*margin-left: 10px;*/
+  width: 83%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  /*font-family: Helvetica neue;*/
+  color:  #a6a6a6; /*#bfbfbf;*/
+  font-size: 12px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 6px;
+}
+.email-send-button{
+  width: 17%;
+  padding: 8px;
+  text-align: center;
+  background: #ff751a;
+  color: white;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  /*font-family: Helvetica neue;*/
+  /*color:  #bfbfbf;*/
+  border-radius: 6px;
+}
+.email-send-button:hover{
+  cursor: pointer;
+  animation-name: increaseIconAnimation;
+  animation-duration: 600ms;
+}
+.email-save-text{
+  margin-left: 5px;
+  /*font-family: sans-serif;*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  /*font-family: Helvetica neue;*/
+  color:  #a6a6a6; /*#bfbfbf;*/
+  font-size: 12px;
+  border-bottom: 2px solid white;
+}
+
+.sent-confirmation-popover{
+  display: none;
+  width: 100px;
+  height: 50px;
+  background: white;
+  /*color: #ff751a;*/
+  color: #bfbfbf;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  /**/
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+.sent-popover-inner{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.sent-popover-icon{
+  /*background: yellow;*/
+  text-align: center;
+  color: green;
+  font-size: 22px;
+}
+.sent-popover-text{
+  margin-top: 4px;
+  /*background: blue;*/
+ text-align: center;
+ font-size: 14px; 
+}
+
+@keyframes increaseIconAnimation {
+  /*transform: scale(1.5);*/
+  /*  0% {
+    transform: scale(.3);
+  }*/
+  
+  50% {
+    transform: scale(1.2);
+    /*color: white;*/  
+  }
+  /*100% {
+    transform: scale(1.5);
+  }*/
+}
+/* ========= FadeOutUp ANIMATION ========= */
+.animated {
+  background-image: url(/css/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-color: red;
+  padding-top:95px;
+  margin-bottom:60px;
+  /**/
+  -webkit-animation-duration: 10s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+     opacity: 1;
+     -webkit-transform: translateY(0);
+  }
+  100% {
+     opacity: 0;
+     -webkit-transform: translateY(-40px);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+  100% {
+     opacity: 0;
+     transform: translateY(-40px);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+
+/*input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}*/
+
+
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sent-background-container{
+    display: none;
+    width: 49px;
+    height: 49px;
+  }
+
+.sent-background-inner{
+  width: 49px;
+  height: 49px;
+  background: white;
+  border-radius: 4px;
+  opacity: 0.9;
+  color: #ff751a;
+  font-size: 12px;
+  padding-top: 15px;
+  line-height: 10px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadein 0.2s;
+  -moz-animation: fadein 0.2s; /* Firefox */
+  -webkit-animation: fadein 0.2s; /* Safari and Chrome */
+  -o-animation: fadein 0.2s; /* Opera */
+}
+
+
+
+
+/* -------- TAGS MENU ---------- */
+
+.extens-tags-menu-container{
+    display: none;
+    /*z-index: 3000;*/ /* FIND WAY TO BRING IT TO chrome context menu's level*/
+    position: absolute;
+    /*overflow: hidden;*/ /* text overflowing div or not*/
+    border: 1px solid #f1f1f1;
+    /*white-space: nowrap;*/
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 3px;
+    width: 200px;
+    height: 100px;
+}
+.extens-tags-menu-inner{
+  padding: 2px;
+  display: flex;
+  align-content: stretch;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /*height: 100%;*/ /*KEY: if you stretch, and height is 100%, it will stretch items to cover necessarily the entire div */
+  color: #a6a6a6;
+  text-overflow: ellipsis;
+}
+.extens-single-tag{
+  /*width: 20%;*/ /*KEY */
+  /*display: inline-flex;*/
+  /*margin-left: 5px;*/
+  margin-right: 8px;
+  margin-bottom: 2px;
+  /*justify-content:center;*/
+  color: #a6a6a6;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.extens-single-tag:hover{
+  background: #ffff66;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ------ SEND FRIENDS MENU ------ */
+
+.extens-send-friends-menu-container{
+    display: none;
+    /*z-index: 3000;*/ /* FIND WAY TO BRING IT TO chrome context menu's level*/
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 3px;
+    width: 200px;
+    height: 100px;
+}
+.extens-send-friends-menu-inner{
+ display: flex;
+  align-content: stretch;
+  flex-wrap: wrap;
+  height: 100%;
+  color: #a6a6a6;
+}
+.extens-single-friend{
+  /*COPY img-container in Main App*/
+  display: inline-flex;
+  /*margin-left: 5px;*/
+  margin-right: 6px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #a6a6a6;
+}
+.extens-single-friend:hover{
+  color: white;
+  background: #99ccff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ------ NEW CONTEXT MENU -------- */
+
+.extens-new-context-menu{
+    display: none;
+    /*z-index: 3000;*/ /* FIND WAY TO BRING IT TO chrome context menu's level*/
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 3px;
+    width: 200px;
+    height: 50px;
+}
+
+.extens-new-context-menu:hover{
+  color: white;
+  background: blue;
+}
+.extens-new-context-menu-inner{
+  /*background: red;*/
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+/* IDs here */
+.extens-new-context-menu-button-container{
+  /*background: #f1f1f1;*/
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  background: #fafafa;
+  padding: 1px;
+  padding-top: 10px;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  color: #80d8ff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*padding-top: 20px;*/
+  font-size: 22px;
+  cursor: pointer;
+}
+.extens-new-context-menu-button-container:hover{
+  background: yellow;
+  /*color: cyan;*/
+}
+
+
+
+/*---------  CARD notification style ----------- */
+
+
+.cardDescriptionStyle{
+  padding: 7px 0 0 0; /* first is top -> bottom; last one is right -> left*/
+  display: inline-block;
+  text-overflow: ellipsis; 
+  height: 70%;
+  width: 95%;
+  overflow: hidden;
+  /*white-space: nowrap;*/
+}
+/* --------- ANTD CARD CLASSED ARE EDITED -------- */
+
+.ant-card {
+
+  background: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  position: relative; /* relative EXPLAINED: if you want to make use of the z-index ; */
+  z-index: 100000;
+  overflow: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ant-card:hover {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+}
+.ant-card-bordered {
+  z-index: 2147483647; /* EXPLAINED: is on top of everything, z-index works */
+  position: relative;
+  border: 1px solid #e9e9e9;
+}
+.ant-card-head {
+  z-index: 2147483647; /* EXPLAINED: is on top of everything, z-index works */
+  position: relative;
+  /*background: red;*/
+  /*height: 35%;*/ /* modified, original value is 48 */
+  /*line-height: 48px;*/
+  border-bottom: 1px solid #e9e9e9;
+  padding: 1px; /* first is Top, then Right, then Left, then bottom this was modified  if it looks FUCKED UP is because the extra element in the extra class below has been pushed far to the right. */
+  /*left: 50px;
+  top: 100px;*/
+  /*padding: 1px 1px 1px 60px;*/ /* may seem weird behavior possibly because works the other way around*/
+}
+.ant-card-head-title {
+  padding: 1px; /*0 15px 100px 60px;*/ /
+  font-size: 14px; /* orig 14 px */
+  /*display: inline-block;*/
+  /*text-overflow: ellipsis;*/ /* this is the final ... */
+  width: 100%;
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/ /* nowrap MEANS ALL ON SAME LINE.*/
+}
+.head-title-container{
+	background: red;
+  z-index: 2147483647; 
+  position: relative;
+  height: 100%;
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+}
+.head-title-inner-title{
+  color: #808080;
+  margin-right: 10px;
+ /* background: yellow;*/
+  margin-top: 10px;
+  margin-bottom: 5px;
+/*font-family: 'FF Kievit Pro Book';*/
+/*font-family: 'FF Kievit Pro Medium';*/
+/*font-family: "Helvetica Neue";*/
+
+/*font-family: "HelveticaNeue-CondensedBold";*/
+/*font-family: "HelveticaNeue-Bold";*/
+/*font-family: 'FF Kievit Pro Bold';*/
+font-weight: 600;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*font-family: 'FF Kievit Pro Bold';
+font-family: FF Kievit Pro ExtraLight;*/
+/* TRY FONT YOU FOUND HERE in the beginning */
+font-size: 18px;
+line-height: 20px;
+display: flex;
+padding: 1px;
+/*background: blue;*/
+width: 83%;
+/*font-weight: bold;*/
+}
+.head-title-thumbnail-container{
+margin-top: 10px;
+padding: 1px;
+/*background: yellow;*/
+width: 17%;
+}
+.card-body-descriptions{
+  padding-top: 10px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+.ant-card-extra {
+  position: absolute;
+  /*right: 268px;*/ /* modified, original values are different*/
+  top: 8px;
+}
+.ant-card-body {
+  /*padding: 24px;*/
+}
+.card-screenshot-container{
+display: flex;
+height: 100%;
+/*background: yellow;*/
+padding: 1px;
+}
+
+.ant-card-loading .ant-card-body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.ant-card-loading-block {
+  display: inline-block;
+  margin: 5px 1% 0;
+  height: 14px;
+  border-radius: 2px;
+  background: -webkit-linear-gradient(left, rgba(207, 216, 220, 0.2), rgba(207, 216, 220, 0.4), rgba(207, 216, 220, 0.2));
+  background: linear-gradient(90deg, rgba(207, 216, 220, 0.2), rgba(207, 216, 220, 0.4), rgba(207, 216, 220, 0.2));
+  -webkit-animation: card-loading 1.4s ease infinite;
+          animation: card-loading 1.4s ease infinite;
+  background-size: 600% 600%;
+}
+@-webkit-keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes card-loading {
+  0%,
+  100% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
